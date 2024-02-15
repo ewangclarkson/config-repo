@@ -4,13 +4,14 @@ spring:
     url: jdbc:mysql://localhost:3306/employee_ms_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
     password: Jesusislordforever7+
-    jpa:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
       hibernate:
-        ddl-auto: update
-      show-sql: true
-      properties:
-        hibernate:
-          format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
 server:
   port: 8081
   servlet:

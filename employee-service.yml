@@ -23,8 +23,10 @@ eureka:
 
 
 management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://localhost:9411
-      sampling:
-        possibility: 1.0
+      endpoint: localhost:9411

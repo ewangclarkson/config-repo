@@ -12,6 +12,12 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
         format_sql: true
+  zipkin:
+    base-url: http://localhost:9411/
+    sleuth:
+      sampler:
+        probability: 1.0
+
 server:
   port: 8081
   servlet:
@@ -25,6 +31,5 @@ eureka:
 management:
   zipkin:
     tracing:
-      endpoint: http://localhost:9411
       sampling:
         possibility: 1.0

@@ -6,11 +6,11 @@ spring:
           - id: employee-service
             uri: lb://employee-service
             predicates:
-              - Path=/employee/**
+              - Path=/employee-service/**
           - id: department-service
             uri: lb://department-service
             predicates:
-              - Path=/department/**
+              - Path=/department-service/**
 server:
   port: 8089
 eureka:
